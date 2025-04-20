@@ -1,6 +1,18 @@
+buildscript {
+    repositories {
+        google()  // Must be first
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0'  // or latest
+        classpath 'com.google.gms:google-services:4.4.1'  // or latest
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"  // if using Kotlin
+    }
+}
+
 allprojects {
     repositories {
-        google()
+        google()  // Must be first
         mavenCentral()
     }
 }
@@ -8,8 +20,6 @@ allprojects {
 rootProject.buildDir = "../build"
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
     project.evaluationDependsOn(":app")
 }
 
