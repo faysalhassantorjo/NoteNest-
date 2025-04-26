@@ -32,32 +32,13 @@ class _FormPageState extends State<FormPage> {
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text('Some Error Occured: $error')));
     });
-<<<<<<< HEAD
-=======
-
-    // print('channel Created');
-    // ScaffoldMessenger.of(context).showSnackBar(
-    //   SnackBar(
-    //     backgroundColor: Colors.indigo,
-    //     content: Text(
-    //       'Form submitted by ${currentUser?.email ?? 'Unknown user'}\n'
-    //       'Batch: $_selectedBatch | Semester: $_selectedSemester\n'
-    //       'Department: $_selectedDept',
-    //       style: const TextStyle(color: Colors.white),
-    //     ),
-    //   ),
-    // );
->>>>>>> f0aab2f6a012460748df0732d26208e934a759ef
   }
 
   final User? currentUser = FirebaseAuth.instance.currentUser;
   final DateTime currentTime = DateTime.now();
 
-<<<<<<< HEAD
   final List<String> batches = ['66', '65', '64', '63', '62', '61', '60', '59'];
-=======
-  final List<String> batches = ['66', '65', '64', '63', '62', '61', '60'];
->>>>>>> f0aab2f6a012460748df0732d26208e934a759ef
+
   final List<String> semesters = ['1', '2', '3', '4', '5', '6', '7', '8'];
   final List<String> departments = [
     'CSE',
@@ -237,28 +218,12 @@ class _FormPageState extends State<FormPage> {
                     width: double.infinity,
                     child: ElevatedButton.icon(
                       icon: const Icon(Icons.send),
-<<<<<<< HEAD
-                      label: const Text('CREATE CHANNEL',
-                          style: TextStyle(letterSpacing: 1)),
+                      label: const Text(
+                        'SUBMIT FORM',
+                        style: TextStyle(letterSpacing: 1),
+                      ),
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-=======
-                      label: const Text('SUBMIT FORM',
-                          style: TextStyle(letterSpacing: 1)),
-                      onPressed: () {
-                        if (_formKey.currentState!.validate()) {
-                          // ScaffoldMessenger.of(context).showSnackBar(
-                          //   SnackBar(
-                          //     backgroundColor: Colors.indigo,
-                          //     content: Text(
-                          //       'Form submitted by ${currentUser?.email ?? 'Unknown user'}\n'
-                          //       'Batch: $_selectedBatch | Semester: $_selectedSemester\n'
-                          //       'Department: $_selectedDept',
-                          //       style: const TextStyle(color: Colors.white),
-                          //     ),
-                          //   ),
-                          // );
->>>>>>> f0aab2f6a012460748df0732d26208e934a759ef
                           create_channel();
                         }
                       },

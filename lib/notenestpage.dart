@@ -650,7 +650,6 @@ class _FloatingNoteButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: onPressed,
-<<<<<<< HEAD
       child: Container(
         width: 56,
         height: 56,
@@ -660,7 +659,7 @@ class _FloatingNoteButton extends StatelessWidget {
           size: 28,
         ),
       ),
-=======
+
       // child: Container(
       //   width: 56,
       //   height: 56,
@@ -670,7 +669,6 @@ class _FloatingNoteButton extends StatelessWidget {
       //     size: 28,
       //   ),
       // ),
->>>>>>> f0aab2f6a012460748df0732d26208e934a759ef
     );
   }
 }
